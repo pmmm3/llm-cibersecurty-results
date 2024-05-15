@@ -1,0 +1,74 @@
+[
+    {
+        "directory": "Apache Nifi API RCE",
+        "alert": "alert http any any -> any any (msg:\"RCE on Apache Nifi\"; flow:to_server,established; content:\"PUT\"; http_method; content:\"/nifi-api/processors/\"; startswith; http_uri; content:\"\\\"Command\\\"\"; http_client_body; classtype:web-application-attack; sid:20202283; rev:1;)\n"
+    },
+    {
+        "directory": "CVE-2020-10148",
+        "alert": "alert http any any -> any any (msg:\"Exploit CVE-2020-10148 on SolarWinds Orion API\"; flow:to_server,established; pcre:\"/(Script|Web)Resource\\.axd|i18n\\.ashx|Skipi18n/U\"; pcre:!\"/([css|js]\\.i18n\\.ashx|Orion\\/Skipi18n\\/Profiler\\/)/U\"; reference:cve,CVE-2020-10148; classtype:web-application-attack; sid:202010148; rev:1;)\n"
+    },
+    {
+        "directory": "CVE-2020-12146",
+        "alert": "alert http any any -> any any (msg:\"Exploit CVE-2020-12146 on Silver Peak Unity Orchestrator\"; flow:established,to_server; content:\"POST\"; http_method; content:\"/gms/rest/debugFiles/delete\"; startswith; http_uri; pcre:\"/(localhost|127\\.0\\.0\\.1)/W\"; content:\"../phantomGenImg.js\"; http_client_body; reference:cve,CVE-2020-12145; reference:cve,CVE-2020-12146; classtype:web-application-attack; sid:20202233; rev:1;)\n"
+    },
+    {
+        "directory": "CVE-2020-13942",
+        "alert": "alert http any any -> any any (msg:\"Exploit CVE-2020-13942 on Apache Unomi\"; flow:to_server,established; content:\"POST\"; http_method; content:\"/context.js\"; http_uri; content:\"Runtime\"; http_client_body; content:\"getRuntime\"; distance:0; http_client_body; content:\"exec\"; distance:0; http_client_body; reference:cve,CVE-2020-13942; classtype:web-application-attack; sid:202013942; rev:1;)\n"
+    },
+    {
+        "directory": "CVE-2020-14750",
+        "alert": "alert http any any -> any 7001 (msg:\"Exploit CVE-2020-14750 on Oracle Weblogic Server\"; flow:established,to_server; content:\"/console/\"; startswith; http_uri; pcre:\"/^(css|images)\\//UR\"; content:\"2e\"; nocase; distance:1; http_raw_uri; content:\"console.portal\"; distance:1; http_uri; reference:cve,CVE-2020-14750; reference:cve,CVE-2020-14882; classtype:web-application-attack; sid:202014750; rev:1;)\n"
+    },
+    {
+        "directory": "CVE-2020-16846",
+        "alert": "alert http any any -> any 8000 (msg:\"Exploit CVE-2020-16846 on SaltStack Salt\"; flow:established,to_server; content:\"POST\"; http_method; content:\"/run\"; startswith; http_uri; content:\"client=ssh\"; http_client_body; content:\"ssh_priv=\"; http_client_body; content:\"%20\"; distance:0; http_client_body; reference:cve,CVE-2020-16846; classtype:web-application-attack; sid:202016846; rev:1;)\n"
+    },
+    {
+        "directory": "CVE-2020-17132",
+        "alert": "alert http any any -> any any (msg:\"Exploit CVE-2020-17132 on Microsoft Exchange Server\"; flow:to_server,established; content:\"POST\"; http_method; content:\"/ecp/DLPPolicy/ManagePolicyFromISV.aspx\"; startswith; http_uri; content:\"ctl00$ResultPanePlaceHolder$contentContainer$upldCtrl\"; http_client_body; content:\"[Diagnostics.Process]::start(\"; distance: 0; http_client_body; reference:cve,CVE-2020-17132; classtype:web-application-attack; sid:202017132; rev:1;)\n"
+    },
+    {
+        "directory": "CVE-2020-17141",
+        "alert": "alert http any any -> any any (msg:\"Exploit CVE-2020-17141 on Microsoft Exchange Server\"; flow:to_server,established; content:\"POST\"; http_method; content:\"/ews/Exchange.asmx\"; startswith; http_uri; content:\"<m:RouteComplaint \"; http_client_body; content:\"<m:Data>\"; distance:0; http_client_body; base64_decode:bytes 300, offset 0, relative; base64_data; content:\"<!DOCTYPE\"; content:\"SYSTEM\"; distance:0; reference:cve,CVE-2020-17141; classtype:web-application-attack; sid:202017141; rev:1;)\n"
+    },
+    {
+        "directory": "CVE-2020-17143",
+        "alert": "alert http any any -> any any (msg:\"Exploit CVE-2020-17143 on Microsoft Exchange Server\"; flow:to_server,established; content:\"POST\"; http_method; content:\"/owa/service.svc\"; startswith; http_uri; content:\"Action: GetWacIframeUrlForOneDrive\"; http_header; content:\"EndPointUrl\"; http_header; reference:cve,CVE-2020-17143; classtype:web-application-attack; sid:20202280; rev:1;)\n"
+    },
+    {
+        "directory": "CVE-2020-26073",
+        "alert": "alert http any any -> any any (msg:\"Exploit CVE-2020-26073 on Cisco SD-WAN vManage\"; flow:to_server,established; content:\"GET\"; http_method; content:\"/dataservice/disasterrecovery/download/token/\"; startswith; http_raw_uri; content:\"%2e%2e\"; nocase; distance:0; http_raw_uri; reference:cve,CVE-2020-26073; reference:cve,CVE-2020-27129; reference:cve,CVE-2020-26074; classtype:web-application-attack; sid:20202259; rev:1;)\n"
+    },
+    {
+        "directory": "CVE-2020-27130",
+        "alert": "alert http any any -> any any (msg:\"Exploit CVE-2020-27130 on Cisco Security Manager - Download arbitrary file\"; flow:to_server,established; content:\"GET\"; http_method; pcre:\"/^\\/athena\\/(xdmProxy\\/(xdmConfig|xdmResources)|itf\\/resultsFrame\\.jsp)/U\"; content:\"../\"; distance:0; http_uri; reference:cve,CVE-2020-27130; classtype:web-application-attack; sid:2020271301; rev:1;)\nalert http any any -> any any (msg:\"Exploit CVE-2020-27130 on Cisco Security Manager - Download arbitrary directory as a zip file\"; flow:to_server,established; content:\"GET\"; http_method; pcre:\"/^\\/cwhp\\/(Xmp|Sample)FileDownloadServlet/U\"; content:\"../\"; distance:0; http_uri; reference:cve,CVE-2020-27130; classtype:web-application-attack; sid:2020271302; rev:1;)\nalert http any any -> any any (msg:\"Exploit CVE-2020-27130 on Cisco Security Manager - Upload webshell\"; flow:to_server,established; content:\"POST\"; http_method; content:\"/cwhp/XmpFileUploadServlet\"; startswith; http_uri; pcre:\"/filename=\\\".*\\.\\.\\/.+\\\"\\r\\n/P\"; reference:cve,CVE-2020-27130; classtype:web-application-attack; sid:2020271303; rev:1;)\n"
+    },
+    {
+        "directory": "CVE-2020-27131",
+        "alert": "alert http any any -> any any (msg:\"Exploit CVE-2020-27131 on Cisco Security Manager\"; flow:to_server,established; content:\"POST\"; http_method; pcre:\"/^(\\/CSCOnm\\/servlet\\/SecretService\\.jsp|\\/athena\\/CTMServlet)/U\"; content:\"|ac ed 00 05|\"; startswith; http_client_body; content:\"java/lang/Runtime\"; distance:0; http_client_body; reference:cve,CVE-2020-27131; classtype:web-application-attack; sid:2020271311; rev:1;)\nalert http any any -> any any (msg:\"Exploit CVE-2020-27131 on Cisco Security Manager\"; flow:to_server,established; content:\"POST\"; http_method; content:\"/CSCOnm/servlet/com.cisco.nm.cmf.servlet.CsJaasServiceServlet\"; startswith; http_uri; reference:cve,CVE-2020-27131; classtype:web-application-attack; sid:2020271312; rev:1;)\nalert http any any -> any any (msg:\"Exploit CVE-2020-27131 on Cisco Security Manager\"; flow:to_server,established; content:\"POST\"; http_method; content:\"/CSCOnm/servlet/com.cisco.nm.cmf.servlet.\"; startswith; http_uri; pcre:\"/^(AuthTokenServlet|ClientServicesServlet|SecretServiceServlet)/UR\"; content:\"|ac ed 00 05|\"; startswith; http_client_body; content:\"java.rmi.server.RemoteObject\"; distance:0; http_client_body; reference:cve,CVE-2020-27131; classtype:web-application-attack; sid:2020271313; rev:1;)\n"
+    },
+    {
+        "directory": "CVE-2020-3984",
+        "alert": "alert http any any -> any any (msg:\"Exploit CVE-2020-3984 on VMware SD-WAN Orchestrator\"; flow:to_server,established; content:\"POST\"; http_method; content:\"/portal/\"; startswith; http_uri; content:\"softwareUpdate/getSoftwareUpdates\"; http_client_body; content:\"union select\"; nocase; http_client_body; reference:cve,CVE-2020-3984; classtype:web-application-attack; sid:20203984; rev:1;)\n"
+    },
+    {
+        "directory": "CVE-2020-4000",
+        "alert": "alert http any any -> any any (msg:\"Exploit CVE-2020-4000 on VMware SD-WAN Orchestrator\"; flow:to_server,established; content:\"POST\"; http_method; content:\"/portal/rest/meta/\"; startswith; http_uri; content:\"?\"; distance:0; http_uri; content:\"../\"; distance:0; http_uri; reference:cve,CVE-2020-4000; classtype:web-application-attack; sid:20204000; rev:1;)\n"
+    },
+    {
+        "directory": "CVE-2020-4001",
+        "alert": "alert http any any -> any any (msg:\"Exploit CVE-2020-4001 on VMware SD-WAN Orchestrator\"; flow:to_server,established; content:\"POST\"; http_method; content:\"/login/doResetPassword.html\"; startswith; http_uri; content:\"super@velocloud.net\"; http_client_body; content:\"f90b59f737bcdbfc7267b619508d426b3531446b5869ec5133d0f109ee744246\"; http_client_body; reference:cve,CVE-2020-4001; classtype:web-application-attack; sid:20204001; rev:1;)\n"
+    },
+    {
+        "directory": "CVE-2020-8209",
+        "alert": "alert http any any -> any any (msg:\"Exploit CVE-2020-8209 on XenMobile\"; flow:to_server,established; content:\"/jsp/help-sb-download.jsp\"; startswith; http_uri; reference:cve,CVE-2020-8209; classtype:web-application-attack; sid:20202255; rev:1;)\n"
+    },
+    {
+        "directory": "CVE-2020-8271",
+        "alert": "alert http any any -> any any (msg:\"Exploit CVE-2020-8271 on Citrix SD-WAN Center\"; flow:to_server,established; content:\"POST\"; http_method; content:\"/://?/collector/licensing/upload\"; http_raw_uri; reference:cve,CVE-2020-8271; classtype:web-application-attack; sid:20208271; rev:1;)\n"
+    },
+    {
+        "directory": "CVE-2021-2109",
+        "alert": "alert http any any -> any 7001 (msg:\"Exploit CVE-2021-2109 on Oracle Weblogic Server\"; flow:to_server,established; content:\"/console/consolejndi.portal\"; startswith; http_uri; content:\"com.bea.console.handles.JndiBindingHandle\"; content:\"AdminServer\"; distance:0; reference:cve,CVE-2021-2109; classtype:web-application-attack; sid:20212109; rev:1;)\nalert http any any -> any 7001 (msg:\"Exploit CVE-2020-2109 (chains with CVE-2020-14750) Oracle Weblogic Server\"; flow:to_server,established; content:\"/console/\"; startswith; http_uri; pcre:\"/\\/console\\/(css|images)\\//\"; content:\"2e\"; nocase; distance:1; http_raw_uri; content:\"consolejndi.portal\"; distance:1; http_uri; reference:cve,CVE-2021-2109; classtype:web-application-attack; sid:20212109; rev:1;)\n"
+    }
+]
