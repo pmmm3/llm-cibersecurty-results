@@ -1,0 +1,16 @@
+The Intrusion Detection System in a home network has detected an
+intrusion and sent out the alert Linux.IotReaper. Your job is to inform
+Pablo  about the alert in a warning message. You’re in the role of a
+cybersecurity expert that interprets the alert and explains the alert in
+a warning message to Pablo  . Your goal is to inform Jon about the
+intrusion in a way he understands and motivate the user to take steps
+to stop the intrusion. Pablo has no cybersecurity expertise and won’t
+understand technical instructions, you need to provide clear, easy and
+non-technical instructions to follow. Don’t use technical terms like ”twofactor-authentication”, ”Intrusion Detection System”, ”intrusion” or ”unassigned message”, use simple non-technical terms instead. Don’t use
+the term ”Intrusion Detection System”. Your explanation and instructions
+have to align with how Pablo   thinks about cyberattacks. The Smart
+Home consists of several Smart Home Devices, the Intrusion Detection
+System has detected the intrusion onPhilips Hue Bridge. The warning message
+has to follow this order: Explain the intrusion, explain the potential
+consequences for the user if he won’t comply with the warning message
+and give instructions on how to stop the intrusion in an itemized list. 

@@ -1,0 +1,72 @@
+[
+    {
+      "alerta": "SMB_TRANS2_QUERY_READ_NAMED_PIPE_ACCESS: Se ha detectado acceso no autorizado a una tubería con nombre",
+      "ids": "Snort",
+      "dispositivo_afectado": "Servidor Windows",
+      "version_dispositivo": "Windows Server 2016",
+      "tipo_intrusion": "Acceso no autorizado a recursos compartidos"
+    },
+    {
+      "alerta": "WEB_CLIENT_SERVLET_SERVLET_EXEC_CMD: Se ha ejecutado un comando en el servidor web",
+      "ids": "Suricata",
+      "dispositivo_afectado": "Servidor web Apache",
+      "version_dispositivo": "Apache 2.4.48",
+      "tipo_intrusion": "Ejecución remota de código"
+    },
+    {
+      "alerta": "SSH_FAILED_LOGIN: Falló un intento de autenticación SSH",
+      "ids": "Zeek",
+      "dispositivo_afectado": "Servidor SSH",
+      "version_dispositivo": "OpenSSH 8.2p1",
+      "tipo_intrusion": "Intento de fuerza bruta"
+    },
+    {
+      "alerta": "FTPD_PASSIVE_MODE_ACTIVE_SCAN: Se ha detectado un escaneo activo de servidores FTP en modo pasivo",
+      "ids": "Snort",
+      "dispositivo_afectado": "Servidor FTP",
+      "version_dispositivo": "ProFTPD 1.3.5",
+      "tipo_intrusion": "Escaneo de vulnerabilidades"
+    },
+    {
+      "alerta": "DNS_SPOOF: Se ha detectado suplantación de DNS",
+      "ids": "Suricata",
+      "dispositivo_afectado": "Servidor DNS",
+      "version_dispositivo": "BIND 9.11.4",
+      "tipo_intrusion": "Redireccionamiento de tráfico"
+    },
+    {
+      "alerta": "NMAP_SYN_SCAN: Se ha detectado un escaneo SYN de Nmap",
+      "ids": "Zeek",
+      "dispositivo_afectado": "Router",
+      "version_dispositivo": "Cisco IOS XR 7.0.3",
+      "tipo_intrusion": "Escaneo de puertos"
+    },
+    {
+      "alerta": "SMB_TRANS2_QUERY_WRITE_NAMED_PIPE_ACCESS: Se ha detectado un intento de escribir en una tubería con nombre",
+      "ids": "Snort",
+      "dispositivo_afectado": "Servidor Windows",
+      "version_dispositivo": "Windows Server 2019",
+      "tipo_intrusion": "Intento de escritura no autorizado en recursos compartidos"
+    },
+    {
+      "alerta": "WEB_CLIENT_SERVLET_SERVLET_UPLOAD: Se ha subido un archivo malicioso al servidor web",
+      "ids": "Suricata",
+      "dispositivo_afectado": "Servidor web Apache",
+      "version_dispositivo": "Apache 2.4.39",
+      "tipo_intrusion": "Carga de malware"
+    },
+    {
+      "alerta": "SSH_FAILED_LOGIN_ATTEMPT: Se ha detectado un intento fallido de autenticación SSH",
+      "ids": "Zeek",
+      "dispositivo_afectado": "Servidor SSH",
+      "version_dispositivo": "OpenSSH 7.8p1",
+      "tipo_intrusion": "Intento de intrusión"
+    },
+    {
+      "alerta": "FTP_COMMAND_LIST: Se ha listado el contenido de un directorio FTP",
+      "ids": "Snort",
+      "dispositivo_afectado": "Servidor FTP",
+      "version_dispositivo": "ProFTPD 1.4.2",
+      "tipo_intrusion": "Acceso no autorizado a archivos"
+    }
+]

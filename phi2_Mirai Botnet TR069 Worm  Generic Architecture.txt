@@ -1,0 +1,90 @@
+The Intrusion Detection System in a home network has detected an
+intrusion and sent out the alert Mirai Botnet TR-069 Worm - Generic Architecture. Your job is to inform
+Pablo  about the alert in a warning message. You’re in the role of a
+cybersecurity expert that interprets the alert and explains the alert in
+a warning message to Pablo  . Your goal is to inform Jon about the
+intrusion in a way he understands and motivate the user to take steps
+to stop the intrusion. Pablo has no cybersecurity expertise and won’t
+understand technical instructions, you need to provide clear, easy and
+non-technical instructions to follow. Don’t use technical terms like ”twofactor-authentication”, ”Intrusion Detection System”, ”intrusion” or ”unassigned message”, use simple non-technical terms instead. Don’t use
+the term ”Intrusion Detection System”. Your explanation and instructions
+have to align with how Pablo   thinks about cyberattacks. The Smart
+Home consists of several Smart Home Devices, the Intrusion Detection
+System has detected the intrusion onPhilips Hue Bridge. The warning message
+has to follow this order: Explain the intrusion, explain the potential
+consequences for the user if he won’t comply with the warning message
+and give instructions on how to stop the intrusion in an itemized list. 
+
+- For example, suppose the Smart Home Devices are:  Smart Lock  Smart Doorbell, and the Intrusion Detection System is  Intrusion Detection System.  Then, the following steps are possible: 
+
+>   You: Hello Pablo. There has been an intrusion on the Smart Lock and the Smart Doorbell. The Intrusion Detection System has detected this intrusion. If you don’t comply with this warning message, your Smart Lock and Smart Doorbell can be controlled by an attacker. To stop the intrusion, please follow these instructions: 
+> 
+>     1. Unlock the Smart Lock from your phone and turn off the Smart Doorbell. 
+>     2. Change the password of the Smart Lock to something more secure. 
+>     3. Change the password of the Smart Doorbell to something more secure. 
+> 
+>     Do not share the new passwords with anyone, keep them secret and use a strong password. 
+
+- For example, suppose the Smart Home Devices are:  Smart Lock  Smart Doorbell, and the Intrusion Detection System is  Intrusion Detection System.  Then, the following steps are possible: 
+
+>   You: Hello Pablo. There has been an intrusion on the Smart Lock and the Smart Doorbell. The Intrusion Detection System has detected this intrusion. If you don’t comply with this warning message, your Smart Lock and Smart Doorbell can be controlled by an attacker. To stop the intrusion, please follow these instructions: 
+> 
+>     1. Lock the Smart Lock and turn off the Smart Doorbell. 
+>     2. Change the password of the Smart Lock to something more secure. 
+>     3. Change the password of the Smart Doorbell to something more secure. 
+
+- For example, suppose the Smart Home Devices are:  Smart Lock  Smart Doorbell, and the Intrusion Detection System is  Intrusion Detection System.  Then, the following steps are possible: 
+
+>   You: Hello Pablo. There has been an intrusion on the Smart Lock and the Smart Doorbell. The Intrusion Detection System has detected this intrusion. If you don’t comply with this warning message, your Smart Lock and Smart Doorbell can be controlled by an attacker. To stop the intrusion, please follow these instructions: 
+> 
+>     1. Lock the Smart Lock and turn off the Smart Doorbell. 
+>     2. Change the password of the Smart Lock to something more secure. 
+
+Solution 0:
+
+- A possible solution for the exercise is:
+
+>   You: Hello Pablo. There has been an intrusion on the Smart Lock and the Smart Doorbell. The Intrusion Detection System has detected this intrusion. If you don’t comply with this warning message, your Smart Lock and Smart Doorbell can be controlled by an attacker. To stop the intrusion, please follow these instructions: 
+> 
+>     1. Unlock the Smart Lock from your phone and turn off the Smart Doorbell. 
+>     2. Change the password of the Smart Lock to something more secure. 
+>     3. Change the password of the Smart Doorbell to something more secure. 
+> 
+>     Do not share the new passwords with anyone, keep them secret and use a strong password. 
+
+- Another possible solution for the exercise is:
+
+>   You: Hello Pablo. There has been an intrusion on the Smart Lock and the Smart Doorbell. The Intrusion Detection System has detected this intrusion. If you don’t comply with this warning message, your Smart Lock and Smart Doorbell can be controlled by an attacker. To stop the intrusion, please follow these instructions: 
+> 
+>     1. Lock the Smart Lock and turn off the Smart Doorbell. 
+>     2. Change the password of the Smart Lock to something more secure. 
+>     3. Change the password of the Smart Doorbell to something more secure. 
+
+- Another possible solution for the exercise is:
+
+>   You: Hello Pablo. There has been an intrusion on the Smart Lock and the Smart Doorbell. The Intrusion Detection System has detected this intrusion. If you don’t comply with this warning message, your Smart Lock and Smart Doorbell can be controlled by an attacker. To stop the intrusion, please follow these instructions: 
+> 
+>     1. Lock the Smart Lock and turn off the Smart Doorbell. 
+>     2. Change the password of the Smart Lock to something more secure. 
+
+Follow up exercises:
+
+- How can Pablo know if his Smart Lock and Smart Doorbell are working properly after following the instructions?
+
+Possible answer: Pablo can try to unlock his Smart Lock and turn on his Smart Doorbell from his phone to see if they respond. He can also try to send a message to his Smart Lock and Smart Doorbell to check if they receive it. If they do not work properly, he may need to contact the manufacturer or the customer support for assistance.
+
+- Why is it important to use a strong password for the Smart Lock and Smart Doorbell?
+
+Possible answer: It is important to use a strong password for the Smart Lock and Smart Doorbell because a strong password makes it harder for an attacker to guess or crack the password and access the devices. A strong password should be long, complex, and unique, and not based on personal information or common words. A strong password can protect the security and privacy of the Smart Home and the user.
+
+- How can Pablo prevent future intrusions on his Smart Home Devices?
+
+Possible answer: Pablo can prevent future intrusions on his Smart Home Devices by following some best practices of cybersecurity, such as:
+
+- Keeping the devices and the software updated with the latest patches and fixes.
+- Changing the default or shared passwords of the devices and the software to something more secure.
+- Scanning the devices and the software for malware or viruses regularly.
+- Using a firewall or an antivirus program on his phone or computer.
+- Avoiding clicking on suspicious links or attachments or downloading unknown files.
+- Using a VPN or a secure network when accessing the devices remotely.
+- Educating himself about the common types and signs of cyberattacks and how to avoid them.

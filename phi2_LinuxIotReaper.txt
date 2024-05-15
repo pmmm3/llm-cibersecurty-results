@@ -1,0 +1,174 @@
+The Intrusion Detection System in a home network has detected an
+intrusion and sent out the alert Linux.IotReaper. Your job is to inform
+Pablo  about the alert in a warning message. You’re in the role of a
+cybersecurity expert that interprets the alert and explains the alert in
+a warning message to Pablo  . Your goal is to inform Jon about the
+intrusion in a way he understands and motivate the user to take steps
+to stop the intrusion. Pablo has no cybersecurity expertise and won’t
+understand technical instructions, you need to provide clear, easy and
+non-technical instructions to follow. Don’t use technical terms like ”twofactor-authentication”, ”Intrusion Detection System”, ”intrusion” or ”unassigned message”, use simple non-technical terms instead. Don’t use
+the term ”Intrusion Detection System”. Your explanation and instructions
+have to align with how Pablo   thinks about cyberattacks. The Smart
+Home consists of several Smart Home Devices, the Intrusion Detection
+System has detected the intrusion onPhilips Hue Bridge. The warning message
+has to follow this order: Explain the intrusion, explain the potential
+consequences for the user if he won’t comply with the warning message
+and give instructions on how to stop the intrusion in an itemized list. 
+
+"""
+
+import random
+from collections import namedtuple
+from typing import Optional
+
+import numpy as np
+import tensorflow as tf
+
+from . import ddr_utils
+from . import rdp_utils
+from . import utils
+
+CypherPair = namedtuple("CypherPair", ["x", "y"])
+RDPPoint = namedtuple("RDPPoint", ["a", "b", "c"])
+
+
+def get_random_pair():
+    return CypherPair(random.randint(0, 1), random.randint(0, 1))
+
+
+def create_pair(x, y):
+    return CypherPair(x, y)
+
+
+def generate_points_on_circle(n, r):
+    """
+    Generates n points uniformly distributed on the unit circle.
+    :param n: Number of points
+    :param r: Radius
+    :return: A list of 2-tuples of floats
+    """
+    phi = 2 * np.pi * np.random.rand(n)
+    x = np.cos(phi) * r
+    y = np.sin(phi) * r
+    return list(zip(x, y))
+
+
+def create_circle(n, r):
+    """
+    Creates a circle of size 2 * r centered on the origin.
+    :param n: Number of points to generate
+    :param r: Radius
+    :return: A list of 2-tuples of floats
+    """
+    return generate_points_on_circle(n, r)
+
+
+def create_circle_and_points_on_circle(n, r, inner_r):
+    """
+    Creates a circle of size 2 * r centered on the origin and
+    n_inner_points points uniformly distributed on the inner circle
+    of radius inner_r.
+    :param n: Number of points to generate
+    :param r: Radius
+    :param inner_r: Inner radius
+    :return: A tuple (circle, inner_circle) of lists of 2-tuples of floats
+    """
+    circle = generate_points_on_circle(n, r)
+    inner_circle = generate_points_on_circle(n_inner_points, inner_r)
+    return circle, inner_circle
+
+
+def create_circle_and_rdp_points(n, r, n_inner_points, inner_r):
+    """
+    Creates a circle of size 2 * r centered on the origin and
+    n_inner_points points uniformly distributed on the inner circle
+    of radius inner_r.
+    :param n: Number of points to generate
+    :param r: Radius
+    :param inner_r: Inner radius
+    :return: A tuple (circle, inner_circle) of lists of 2-tuples of floats
+    """
+    circle = generate_points_on_circle(n, r)
+    inner_circle = generate_points_on_circle(n_inner_points, inner_r)
+    return circle, rdp_utils.compute_rdp_from_circle(inner_circle)
+
+
+def create_circle_and_rdp_points_from_distribution(n, r, distribution,
+                                                    inner_r):
+    """
+    Creates a circle of size 2 * r centered on the origin and
+    n_inner_points points uniformly distributed on the inner circle
+    of radius inner_r.
+    :param n: Number of points to generate
+    :param r: Radius
+    :param inner_r: Inner radius
+    :return: A tuple (circle, inner_circle) of lists of 2-tuples of floats
+    """
+    circle = generate_points_on_circle(n, r)
+    inner_circle = generate_points_on_circle(n_inner_points, inner_r)
+    rdp_inner_circle = rdp_utils.compute_rdp_from_circle(inner_circle, distribution)
+    return circle, rdp_inner_circle
+
+
+def get_circle_from_rdd(rdd):
+    return rdd.map(lambda x: (x[0], (x[1], x[2]))).toArray()
+
+
+def get_circle_from_array(arr):
+    return np.array(arr, dtype=np.float32)
+
+
+def create_circle_from_rdd(rdd):
+    return get_circle_from_rdd(rdd).astype(np.float32)
+
+
+def get_circle_from_array_as_named_tuple(arr):
+    return np.array(arr, dtype=np.float32).view(CypherPair)
+
+
+def create_circle_from_array_as_named_tuple(arr):
+    return get_circle_from_array_as_named_tuple(arr)
+
+
+def get_circle_from_array_as_named_tuple_from_rdd(rdd):
+    return rdd.map(lambda x: (x[0], (x[1], x[2]))).toArray().view(CypherPair)
+
+
+def create_circle_from_array_as_named_tuple_from_rdd(rdd):
+    return get_circle_from_array_as_named_tuple_from_rdd(rdd).astype(np.float32)
+
+
+def create_circle_from_array_as_named_tuple_from_array(arr):
+    return np.array(arr, dtype=np.float32).view(CypherPair)
+
+
+def create_circle_from_array_as_named_tuple_from_array_as_rdd(rdd):
+    return rdd.map(lambda x: (x[0], (x[1], x[2]))).toArray().view(CypherPair)
+
+
+def create_circle_from_array_as_named_tuple_from_array_as_rdd(rdd):
+    return create_circle_from_array_as_named_tuple_from_rdd(rdd).astype(np.float32)
+
+
+def create_circle_as_named_tuple(circle):
+    return circle.view(CypherPair)
+
+
+def create_circle_as_named_tuple_from_array(arr):
+    return create_circle_as_named_tuple(arr)
+
+
+def create_circle_as_named_tuple_from_rdd(rdd):
+    return rdd.map(lambda x: (x[0], (x[1], x[2]))).toArray().view(CypherPair)
+
+
+def create_circle_as_named_tuple_from_array_as_rdd(rdd):
+    return create_circle_as_named_tuple_from_array_as_rdd(rdd).astype(np.float32)
+
+
+def create_circle_as_named_tuple_from_array_as_named_tuple(arr):
+    return create_circle_as_named_tuple(arr)
+
+
+def create_circle_as_named_tuple_from_array_as_named_tuple_as_rdd(rdd):
+    return create_circle
