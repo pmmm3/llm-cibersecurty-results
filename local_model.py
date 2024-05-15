@@ -1,3 +1,7 @@
+""""
+This script is a simulation of an application called "Ollama" that uses local models. 
+The purpose of the script is to provide a user interface where the user can select different modes of operation.
+"""
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from tqdm import tqdm
@@ -56,64 +60,67 @@ alerts = [
     "Detects remote task creation via at.exe or API interacting with ATSVC namedpipe"
 ]
 
-while True:
-    print("\n\nBienvenido al laboratorio de pruebas. Seleccione un modo para comenzar o 'salir' para terminar.")
-    print("1. Generar salida en fichero de todas las alertas en todos los modelos.")
-    print("2. Conversar")
-    print("3. Salir")
-    choice = input("\nIngrese el número correspondiente al modo que desea usar: ")
+def main():
+    while True:
+        print("\n\nBienvenido al laboratorio de pruebas. Seleccione un modo para comenzar o 'salir' para terminar.")
+        print("1. Generar salida en fichero de todas las alertas en todos los modelos.")
+        print("2. Conversar")
+        print("3. Salir")
+        choice = input("\nIngrese el número correspondiente al modo que desea usar: ")
 
-    if choice == "3" or choice.lower() == "salir":
-        break
-
-    if choice == "1":
-        # Generar salida en ficheros para cada modelo y alerta
-        for model_key, model_name in models.items():
-            print(f"Cargando modelo {model_name}...")
-            tokenizer, model = load_model(model_name)
-            for alert in tqdm(alerts, desc=f"Modelo {model_name}"):
-                print(f"Generando salida para alerta: {alert}")
-                prompt = generate_prompt(alert)
-                try:
-                    result = generate_text(model, tokenizer, prompt)
-                    safe_model_name = re.sub(r'[^\w\s]', '', model_name)
-                    safe_alert = re.sub(r'[^\w\s]', '', alert)
-                    filename = f"{safe_model_name}_{safe_alert}.txt"
-                    with open(filename, "w", encoding="utf-8") as f:
-                        f.write(result)
-                except Exception as e:
-                    print(f"Error al generar salida para alerta {alert}: {e}")
-                    continue
-                
-            # Liberar recursos del modelo actual antes de cargar el siguiente
-            del model
-            torch.cuda.empty_cache()
-        print("Salida generada en ficheros.")
-        break
-
-    
-
-    if choice == "2" or choice.lower() == "conversar":
-        while True:
-            print("\nSeleccione un modelo:")
-            for model in models:
-                print(f"{model}: {models[model]}")
-            print("salir: Volver atrás")
-            choice_model = input("\nIngrese el número correspondiente al modelo que desea usar: ")
-            if choice_model.lower() == "salir":
-                break
-
-            if choice_model not in models:
-                print("\nModelo no válido. Intente de nuevo.")
-                continue
-            
-            user_input = input("\nIngrese el texto con el que desea comenzar la conversación: ")
-            model_name = models[choice_model]
-            tokenizer, model = load_model(model_name)
-            print("Generando texto...\n\n")
-            print(generate_text(model, tokenizer, user_input))
+        if choice == "3" or choice.lower() == "salir":
             break
 
+        if choice == "1":
+            # Generar salida en ficheros para cada modelo y alerta
+            for model_key, model_name in models.items():
+                print(f"Cargando modelo {model_name}...")
+                tokenizer, model = load_model(model_name)
+                for alert in tqdm(alerts, desc=f"Modelo {model_name}"):
+                    print(f"Generando salida para alerta: {alert}")
+                    prompt = generate_prompt(alert)
+                    try:
+                        result = generate_text(model, tokenizer, prompt)
+                        safe_model_name = re.sub(r'[^\w\s]', '', model_name)
+                        safe_alert = re.sub(r'[^\w\s]', '', alert)
+                        filename = f"{safe_model_name}_{safe_alert}.txt"
+                        with open(filename, "w", encoding="utf-8") as f:
+                            f.write(result)
+                    except Exception as e:
+                        print(f"Error al generar salida para alerta {alert}: {e}")
+                        continue
+                    
+                # Liberar recursos del modelo actual antes de cargar el siguiente
+                del model
+                torch.cuda.empty_cache()
+            print("Salida generada en ficheros.")
+            break
+
+        
+
+        if choice == "2" or choice.lower() == "conversar":
+            while True:
+                print("\nSeleccione un modelo:")
+                for model in models:
+                    print(f"{model}: {models[model]}")
+                print("salir: Volver atrás")
+                choice_model = input("\nIngrese el número correspondiente al modelo que desea usar: ")
+                if choice_model.lower() == "salir":
+                    break
+
+                if choice_model not in models:
+                    print("\nModelo no válido. Intente de nuevo.")
+                    continue
+                
+                user_input = input("\nIngrese el texto con el que desea comenzar la conversación: ")
+                model_name = models[choice_model]
+                tokenizer, model = load_model(model_name)
+                print("Generando texto...\n\n")
+                print(generate_text(model, tokenizer, user_input))
+                break
 
 
 
+
+if __name__ == "__main__":
+    main()
