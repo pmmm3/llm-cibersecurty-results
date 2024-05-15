@@ -1,6 +1,0 @@
-# Ignorar todos los archivos y carpetas
-/**
-
-# Exceptuar la carpeta suricata-rules y todo su contenido
-!/suricata-rules
-!/suricata-rules/**
