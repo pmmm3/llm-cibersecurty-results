@@ -3,3 +3,5 @@
 !/suricata-rules
 !/suricata-rules/*
 !/suricata-rules/*/*
+!/outputs
+!/outputs/*
