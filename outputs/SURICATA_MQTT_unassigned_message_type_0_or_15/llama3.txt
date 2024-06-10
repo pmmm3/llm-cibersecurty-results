@@ -1,0 +1,26 @@
+Here's a warning message that I came up with:
+
+**Warning Message**
+
+Hi Pablo,
+
+I've detected some suspicious activity in your home network, and it's important you take action right away.
+
+Someone or something has tried to break into your Philips Hue Bridge, which controls all the smart devices in your home. If we don't stop this intrusion now, it could lead to serious problems:
+
+* Your lights, thermostats, and other smart devices might start behaving strangely or malfunction.
+* You may lose control over your devices altogether.
+* Your personal data, like login credentials and device settings, could be compromised.
+
+To prevent these issues, follow these simple steps:
+
+1. Log in to your Philips Hue account on your phone or computer.
+2. Go to the "Devices" tab and make sure all your smart devices are disconnected from the network.
+3. Restart your router and modem to refresh the connection.
+4. Change your Philips Hue Bridge password by going to the "Settings" menu.
+5. Update the firmware of your Philips Hue Bridge using the official app or website.
+
+By following these steps, you'll be able to stop this intrusion and keep your smart home devices safe. Remember, it's always better to be proactive when it comes to online security!
+
+Take care,
+[Your Name]

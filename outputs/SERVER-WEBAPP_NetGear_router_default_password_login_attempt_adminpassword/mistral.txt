@@ -1,0 +1,22 @@
+ Subject: Urgent - Suspicious Activity Detected on Your Home Network
+
+Hi Pablo,
+
+I hope this message finds you well. I have some important news to share with you regarding your home network. Recently, our system has detected unusual activity trying to access the Philips Hue Bridge using the default password "admin/password". This is a potential security risk that we cannot ignore.
+
+Let me explain what's happening in simpler terms: Someone tried to log into your Hue Bridge without your permission. The default password is well-known and easily accessible online, making it an easy target for cybercriminals. Once they gain access, they could potentially take control of your smart home devices, disrupt your network, or even steal personal information.
+
+To help you protect your home network against this issue:
+
+1. Change the password: Log into your Philips Hue account and set a strong, unique password for your bridge. This will make it harder for unauthorized users to gain access to your devices.
+2. Update software: Ensure all your smart home devices are updated with the latest software patches. These updates often include security improvements that help protect against known vulnerabilities.
+3. Enable guest networks: If you frequently have guests over, consider setting up a separate guest network for their devices. This will help keep their devices isolated from your main network and reduce the risk of potential intrusions.
+4. Keep an eye on your network: Regularly check your network for any unusual activity or unrecognized devices. If you notice anything suspicious, contact our support team right away.
+
+Taking these steps now can significantly minimize the risks associated with this issue and help secure your home network. Don't let your guard down – cybersecurity is an ongoing process that requires your attention. Stay vigilant and keep your home safe!
+
+If you have any questions or concerns, please don't hesitate to reach out. We are always here to help.
+
+Best regards,
+[Your Name]
+Cybersecurity Expert

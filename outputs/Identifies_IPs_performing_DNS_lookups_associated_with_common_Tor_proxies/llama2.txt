@@ -1,0 +1,25 @@
+Subject: Urgent: Suspicious Activity Detected on Your Home Network
+
+Dear Pablo,
+
+I hope this message finds you well. I am writing to inform you of a potential security issue with your home network. Our system has detected an intrusion attempt on the Philips Hue Bridge, which could potentially lead to unauthorized access to your smart devices and personal data.
+
+Here's what happened: Our system identified IP addresses associated with common Tor proxies performing DNS lookups within your network. This is a red flag because Tor is often used by cybercriminals to disguise their identity while conducting malicious activities online.
+
+If left unchecked, this intrusion could result in the following consequences:
+
+* Unauthorized access to your smart devices and personal data, including photos, emails, and financial information.
+* Compromised security of your home network, making it vulnerable to future attacks.
+* Possibility of identity theft or financial loss due to stolen sensitive information.
+
+To address this issue, please take the following steps:
+
+1. Change Your Password: Immediately update your router's password and any other devices connected to the network. Use a strong and unique password that includes a mix of uppercase and lowercase letters, numbers, and special characters.
+2. Enable Two-Factor Authentication: Activate two-factor authentication (2FA) on your router and any other devices that offer this feature. This adds an extra layer of security to prevent unauthorized access.
+3. Disable Unused Devices: Go through your smart devices and disconnect or disable any unused or unnecessary ones. This reduces the attack surface and makes it harder for cybercriminals to find a vulnerability to exploit.
+4. Keep Your Software Up-to-Date: Ensure that all your smart devices' software is up-to-date with the latest security patches and features. Outdated software can leave holes in your system that intruders can exploit.
+5. Monitor Your Network Activity: Regularly check your network activity logs to detect any suspicious behavior or unfamiliar IP addresses. This helps you identify potential threats early on and take action before they become a larger issue.
+
+By following these steps, you can help protect your home network and prevent further intrusions. If you have any questions or concerns, please feel free to reach out to me for assistance.
+
+Remember, cybersecurity is everyone's responsibility, and taking proactive measures now can save you a lot of time and trouble in the long run. Stay safe!

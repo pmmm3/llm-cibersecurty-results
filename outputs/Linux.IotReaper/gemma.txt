@@ -1,0 +1,19 @@
+**Subject: Urgent Security Alert - Philips Hue Bridge compromised!**
+
+Hey Pablo! 🚨
+
+There's been an unauthorized access attempt to your Philips Hue Bridge, which controls all your connected lights. Someone is trying to gain control of your smart home! 💡
+
+This could mean they could:
+
+* Dim or brighten your lights at odd hours. 💡
+* Turn your lights on/off at unexpected times. 🏠
+* Use your lights to spy on you or eavesdrop on your conversations. 👂
+
+**Here's what you need to do right away to secure your smart home:**
+
+* **Change the default password** for your Philips Hue Bridge immediately. It's likely the attacker already knows it. Use a strong and unique password that's at least 12 characters long and includes a mix of letters, numbers, and symbols. 🔑
+* **Update your Philips Hue Bridge firmware** to the latest version. This fixes known security vulnerabilities. 💻
+* **Consider temporarily disconnecting** your Philips Hue Bridge from your network until you've taken these steps. 🔌
+* **Review your other smart home devices** for any suspicious activity. Change their passwords too if needed. 🕵️‍♀️
+* **Keep your smart home software and devices up to date** with the latest security patches. 🛡️

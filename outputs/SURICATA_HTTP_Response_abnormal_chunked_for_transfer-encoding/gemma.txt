@@ -1,0 +1,25 @@
+**Attention Required! Security Alert**
+
+Hi Pablo! 
+
+We've detected unusual activity on your Philips Hue Bridge, which controls your smart lights. This could be someone trying to access your network without permission. 
+
+**Here's what happened:**
+
+Someone has sent an alert indicating suspicious activity involving chunked transfer-encoding, which is a technique often used in cyberattacks. 
+
+**Why is this a concern?**
+
+If left unchecked, this unauthorized access could:
+
+- Allow someone to control your smart lights, potentially disrupting your home's lighting.
+- Expose other connected devices in your network to potential compromise.
+
+**What to do:**
+
+1. **Change your Philips Hue Bridge password immediately.** Choose a strong password that is at least 12 characters long and includes a mix of uppercase and lowercase letters, numbers, and symbols.
+2. **Update your Philips Hue Bridge to the latest firmware version.** Manufacturers often release security patches to fix vulnerabilities.
+3. **Isolate the Philips Hue Bridge from other devices on your network.** This reduces the risk of the attack spreading to other connected devices.
+4. **Consider adding additional security measures** such as enabling two-factor authentication for your Philips Hue Bridge account.
+
+**Please take action as soon as possible to prevent further security risks.**

@@ -1,0 +1,20 @@
+ Subject: Urgent Alert - Unauthorized Access Detected on Your Philips Hue Bridge
+
+Hi Pablo,
+
+I hope this message finds you well. I have some important news regarding your home network. The system has detected unauthorized access to your Philips Hue Bridge. This means that someone gained uninvited control over the devices connected to it, potentially putting your smart home at risk.
+
+Potential consequences:
+- Unwanted access to personal data stored on or shared through connected devices (e.g., cameras or voice assistants)
+- Manipulation of settings, causing discomfort or malfunctions in smart home appliances
+- Increased risk for other cyberattacks and unintended consequences
+
+To help protect your home and secure your Philips Hue Bridge, please follow these steps:
+
+1. Update all connected devices and the Hue Bridge software to the latest versions.
+2. Change the password of your Hue Bridge by going into its settings using a web browser or the app on your phone. Use a strong, unique password that you don't use for other online accounts.
+3. Ensure all devices in your home network have strong and unique passwords as well. Consider changing these frequently.
+4. Disable any unrecognized or unused services and ports on the Hue Bridge to minimize potential entry points.
+5. Regularly check the software versions of all connected devices, especially those that require automatic updates. Enable automatic updates whenever possible.
+
+Remember that cybersecurity is a continuous process and staying informed about security threats and taking appropriate measures is crucial for safeguarding your home. If you need further assistance or have any questions, don't hesitate to contact us. Stay safe!

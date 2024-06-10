@@ -1,0 +1,16 @@
+Here is a warning message that explains the situation and provides clear instructions to Pablo:
+
+**Warning Message:**
+
+Pablo, we've detected something suspicious happening in your home network! Our security system has alerted us that someone might be trying to access your smart devices without permission.
+
+If you don't take action, this could lead to serious problems for you. The intruder could control your lights, thermostat, and even cameras, giving them access to your daily routine. They might even use this access to spy on you or steal sensitive information. This is a big deal!
+
+To stop this from happening, please follow these steps:
+
+1. **Change Your Password**: Go to the Philips Hue app and change your login password. Make it strong and unique.
+2. **Update Your Firmware**: Open the Philips Hue app and check for any firmware updates. Install them as soon as possible.
+3. **Secure Your Network**: Make sure all devices connected to your network have up-to-date antivirus software and firewalls enabled.
+4. **Disable Remote Access**: Go to the Philips Hue settings and disable remote access to your bridge. This will prevent anyone from controlling your devices without permission.
+
+By following these steps, you'll be able to stop this unwanted intrusion and keep your smart home safe and secure!

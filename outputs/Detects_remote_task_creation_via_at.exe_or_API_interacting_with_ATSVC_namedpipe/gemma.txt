@@ -1,0 +1,20 @@
+**Attention Required!**
+
+Hi Pablo,
+
+We've detected suspicious activity in your Smart Home network. Someone is attempting to access your Philips Hue Bridge, which controls your smart lights, through an unauthorized application.
+
+This could mean that someone is trying to gain access to your lights and potentially make changes that could compromise your home's security.
+
+**Potential consequences of ignoring this warning:**
+
+* Someone could remotely control your lights, potentially leaving them on or off at inappropriate times.
+* They could change the colors or brightness of your lights, disrupting your home's ambiance.
+* In the worst-case scenario, they could access other connected devices in your Smart Home network, compromising your entire home security.
+
+**Here's what you can do to stop the intrusion:**
+
+- Change the default password for your Philips Hue Bridge. Make sure it's a strong password that's difficult to guess.
+- Update the Philips Hue Bridge firmware to the latest version. This will fix any known security vulnerabilities.
+- Install and enable two-factor authentication for your Philips Hue Bridge account. This will require you to enter a code from your phone in addition to your password when logging in.
+- Check your router's security settings and make sure that only authorized devices are connected to your network.

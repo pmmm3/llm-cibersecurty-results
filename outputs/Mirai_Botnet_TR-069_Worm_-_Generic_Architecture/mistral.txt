@@ -1,0 +1,22 @@
+ Subject: Urgent - Suspected Unauthorized Access to Your Philips Hue Bridge
+
+Hi Pablo,
+
+I hope this message finds you well. I've got some important news about your home network that I believe you should be aware of. Recently, there was an uninvited guest trying to access your Philips Hue Bridge. This is like someone attempting to enter your house without permission.
+
+The intruder is believed to be part of a large group of unfriendly computers called the Mirai Botnet. They've been known to cause trouble in other people's networks, and now it seems they've set their sights on yours.
+
+If left unchecked, this unwanted presence could potentially lead to various issues:
+
+1. Privacy Concerns: The intruders might be able to see your lighting patterns or even control your devices at will, which is not ideal for maintaining privacy in your home.
+2. Security Risks: They could also use your network as a base to launch attacks against other systems on the internet, potentially putting you and others at risk.
+3. Financial Costs: Intrusions can sometimes result in unwanted charges or subscriptions, which might end up costing you money.
+
+To protect your home and devices from this unwelcome visitor, please follow these simple steps:
+
+1. Disconnect the Philips Hue Bridge: Unplug the power cord of your Philips Hue Bridge from the power outlet for now to isolate it from the network. This will prevent any further unauthorized access while we work on a permanent solution.
+2. Change Your Network Password: Once you've disconnected the bridge, consider updating your home network password as an extra precaution. Use a strong, unique password consisting of at least 12 characters, including letters, numbers, and symbols.
+3. Keep Software Updated: Make sure all your smart devices are up-to-date with their latest software versions to minimize any vulnerabilities that could be exploited by intruders.
+4. Contact Philips Support: For additional assistance or concerns regarding your Philips Hue Bridge, reach out to their support team at [Philips Hue Support](mailto:support@philips-hue.com). They can provide further guidance and ensure your device is secure.
+
+If you have any questions or need help with the instructions, please don't hesitate to contact me. Stay safe and secure!

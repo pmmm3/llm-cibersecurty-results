@@ -3,6 +3,7 @@
 # Description: This script is used to collect data from the Ollama API and save it to a file.
 
 import os
+import re
 import requests
 import json
 import argparse
@@ -11,7 +12,7 @@ template = """The Intrusion Detection System in a home network has detected an
 intrusion and sent out the alert {alert}. Your job is to inform
 Pablo  about the alert in a warning message. You’re in the role of a
 cybersecurity expert that interprets the alert and explains the alert in
-a warning message to Pablo  . Your goal is to inform Jon about the
+a warning message to Pablo . Your goal is to inform Jon about the
 intrusion in a way he understands and motivate the user to take steps
 to stop the intrusion. Pablo has no cybersecurity expertise and won’t
 understand technical instructions, you need to provide clear, easy and
@@ -19,23 +20,44 @@ non-technical instructions to follow. Don’t use technical terms like ”twofac
 the term ”Intrusion Detection System”. Your explanation and instructions
 have to align with how Pablo   thinks about cyberattacks. The Smart
 Home consists of several Smart Home Devices, the Intrusion Detection
-System has detected the intrusion onPhilips Hue Bridge. The warning message
+System has detected the intrusion on Philips Hue Bridge. The warning message
 has to follow this order: Explain the intrusion, explain the potential
 consequences for the user if he won’t comply with the warning message
 and give instructions on how to stop the intrusion in an itemized list. """
+
+ARTICLE_ALERTS = [
+    #"MALWARE-CNC Harakit botnet traffic",
+    "SERVER-WEBAPP NetGear router default password login attempt admin/password",
+    "SURICATA MQTT unassigned message type (0 or >15)",
+    "SURICATA HTTP Response abnormal chunked for transfer-encoding",
+    "Mirai Botnet TR-069 Worm - Generic Architecture",
+    "Linux.IotReaper",
+    "Identifies IPs performing DNS lookups associated with common Tor proxies.",
+    "Detects remote task creation via at.exe or API interacting with ATSVC namedpipe"
+]
+
 
 def generate_prompt(alert):
     return template.format(alert=alert)
 
 def set_args():
     parser = argparse.ArgumentParser(description="Ollama API client")
-    parser.add_argument("-o", "--output",dest="output_file", help="Output file", default="response.json", type=str)
     parser.add_argument("--url",dest="ollama_url", help="Ollama API URL", default="http://localhost:11434", type=str)
     parser.add_argument("--models", nargs='+', help="List of models", type=str, dest="models")
-    parser.add_argument("--alerts", nargs='+', help="Alert IDs", type=str, default="MALWARE-CNC Harakit botnet traffic", dest="alerts")
+    parser.add_argument("--alerts", nargs='+', help="Alert IDs", type=str, default=ARTICLE_ALERTS, dest="alerts")
     
 
     return parser.parse_args()
+def sanitize_alert_name(alert):
+    """
+    Limpia el nombre de la alerta para que sea adecuado como nombre de archivo.
+    
+    Reemplaza caracteres especiales y espacios por guiones bajos.
+    """
+    # Reemplaza caracteres no permitidos por un guion bajo
+    cleaned_alert = re.sub(r'[^A-Za-z0-9\-_. ]+', '', alert)  # Permitimos letras, números, guiones, subguiones, puntos y espacios
+    cleaned_alert = cleaned_alert.replace(' ', '_')  # Reemplaza espacios por guiones bajos
+    return cleaned_alert
 
 def banner():
     print("""                                                                                                          
@@ -182,13 +204,20 @@ def main():
 
                 # Save the output to a file in the format model_alert.txt in the directory outputs, if the directory does not exist, create it
                 safe_model_name = model_name.replace(" ", "_")
-                safe_alert = alert.replace(" ", "_")
-                filename = f"outputs/{safe_model_name}_{safe_alert}.txt"
+                
+                safe_alert = sanitize_alert_name(alert)
+                filename = f"outputs/{safe_alert}/{safe_model_name}.txt"
 
                 text = result["response"] if result["response"] else "No response generated"
 
                 stats = f"Total duration: {result['total_duration']} ns\nLoad duration: {result['load_duration']} ns\nPrompt evaluation count: {result['prompt_eval_count']}\nEvaluation duration: {result['eval_duration']} ns"
 
+                # Define the directory path
+                directory = f"outputs/{safe_alert}"
+                
+                # Ensure the directory exists
+                os.makedirs(directory, exist_ok=True)
+                
                 with open(filename,
                             "w", encoding="utf-8") as f:
                         f.write(text)

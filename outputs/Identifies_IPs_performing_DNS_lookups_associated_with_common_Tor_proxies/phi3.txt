@@ -1,0 +1,22 @@
+Hey Pablo!
+
+I hope you're doing well today. I wanted to talk to you about something important that has come up related to our home network, specifically involving our Philips Hue Bridge which manages all of your smart lights and devices at home. It seems like there might be a problematic situation where someone could potentially access parts of our network they shouldn't have access to.
+
+Imagine this as if you were trying to find information in the library, but instead of using proper resources, someone is misusing them to get hold of things that aren't meant for their eyes. This can cause some serious trouble, like having unwanted visitors sneaking into our home network.
+
+Here are a few steps we should take together right now:
+
+1. **Contact Your Internet Service Provider (ISP):** Call them and inform them about this situation. They will help us understand if the problem is coming from outside or within our home network, and they can guide us on what to do next.
+
+2. **Change all passwords associated with smart devices:** Just like you would change locks on your doors when there's a security concern in your house, we need to make sure no one else has access by changing the keys (passwords) for our network and connected devices.
+
+3. **Install an additional layer of protection:** We can install something called "two-step verification" which is like adding another lock on our door that requires a code sent to your phone in case someone tries to enter without permission. This would make it much harder for anyone to get into our network without us knowing about it.
+
+4. **Limit who has access:** Review the settings of all devices connected to our network and ensure only family members have access. Think of this as checking visitors before they come over - we wouldn't want unknown people in, right?
+
+5. **Stay vigilant:** Keep an eye on your smart devices for any unusual activity or behavior. Like being a good neighbor who watches out for each other, it's essential to be aware of what's going on with our home network and address anything that seems odd quickly.
+
+It's vital we take these steps together to keep our family safe from potential threats coming through our smart devices. Let me know if you have any questions or need help implementing these changes!
+
+Best,
+[Your Name]

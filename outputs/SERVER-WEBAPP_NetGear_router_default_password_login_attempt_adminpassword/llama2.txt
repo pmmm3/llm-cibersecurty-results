@@ -1,0 +1,21 @@
+Subject: Urgent: Suspicious Activity Detected on Your Smart Home Network
+
+Dear Pablo,
+
+We've got some concerning news regarding your home network security. Our built-in protection system has recognized an unwanted guest attempting to log in to the Philips Hue Bridge without authorization. This could be a security threat, so we need to take quick action to protect your privacy and personal information.
+
+The unauthorized party is trying to access your network through the default password for your NetGear router's login page (admin/password). This is a critical situation that needs immediate attention to avoid further damage. Ignoring this alert can put your private data, including pictures, documents, and personal information, at risk of being accessed or stolen.
+
+To address this problem, we recommend taking the following steps:
+
+1. Change Your Router's Default Password: Immediately update your router's default password to a strong and unique one that only you know. This will prevent any unwanted guests from accessing your network in the future.
+2. Enable Two-Factor Authentication: Activate two-factor authentication on your router to add an extra layer of security to prevent unauthorized access.
+3. Review Your Smart Home Devices' Security Settings: Make sure all your smart home devices are secure by reviewing their privacy and security settings. Ensure they are set to connect only to trusted sources, and update any outdated software or apps.
+4. Limit Unauthorized Access to Your Network: Set up a firewall to limit unauthorized access to your network. This will help prevent any unwanted guests from entering your home network.
+
+By following these steps, you can significantly reduce the risk of security breaches on your Smart Home network and protect your sensitive data. Please take action as soon as possible to ensure your privacy and personal information remain secure.
+
+If you have any questions or concerns, feel free to reach out to us for assistance. We're here to help you keep your home network safe and secure.
+
+Best regards,
+[Your Name]

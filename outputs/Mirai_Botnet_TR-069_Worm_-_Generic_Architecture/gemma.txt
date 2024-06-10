@@ -1,0 +1,26 @@
+**Attention Required! Potential Security Breach Detected**
+
+Hi Pablo! 
+
+Your Smart Home network has detected unusual activity on one of your connected devices, the Philips Hue Bridge. This activity suggests that someone might be trying to access your network without permission. 
+
+**Here's what you need to know:**
+
+- This attack is known as the Mirai Botnet TR-069 Worm - Generic Architecture. 
+- Attackers can use this worm to control your connected devices and use them to perform malicious activities.
+
+**What's at stake?**
+
+If this intrusion is not addressed, attackers could:
+
+- Control your connected devices, like your lights and thermostats, making them unusable or even dangerous.
+- Access sensitive information stored on your network, like financial records or personal data.
+- Launch further attacks against other devices and networks.
+
+**Here's what you can do to protect your network:**
+
+- **Change the default password:** Many connected devices come with default passwords that are easily guessed by attackers. Change the default password for your Philips Hue Bridge to a strong and unique one.
+- **Update your device software:** Manufacturers often release security updates to fix vulnerabilities in their devices. Check for and install any available updates for your Philips Hue Bridge.
+- **Isolate the affected device:** If possible, isolate the Philips Hue Bridge from other devices on your network by connecting it to a different network segment.
+- **Change your network password:** Your network password should be complex and difficult for attackers to guess. Choose a password that includes a mix of upper and lowercase letters, numbers, and symbols.
+- **Keep your devices up to date:** Regularly update your other connected devices to the latest firmware and security patches.

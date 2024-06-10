@@ -1,0 +1,23 @@
+**Attention Required!** 🚨
+
+There's been suspicious activity detected in your Smart Home network specifically on the Philips Hue Bridge. This device controls your lights and other connected Hue devices. 💡
+
+**Here's what happened:**
+
+Someone has attempted to access your Philips Hue Bridge without your permission, potentially compromising your connected lights and other smart devices. ⚠️
+
+**What's at stake:**
+
+If left unchecked, the intruder can:
+
+- Control your lights and other connected devices without your consent
+- Access sensitive information linked to your Philips Hue Bridge account
+- Introduce malware into your network, compromising other connected devices
+
+**What to do:**
+
+1. **Immediately change your Philips Hue Bridge password** to a strong and unique one. 🔑
+2. **Temporarily disconnect the Philips Hue Bridge from your network** to isolate the potential intrusion. 🔌
+3. **Change the network credentials** of your router. This will ensure no other device has unauthorized access. 💻
+4. **Consider updating your Philips Hue Bridge firmware** to the latest version for improved security. 💻
+5. **Review your Smart Home device list** and remove any device you don't recognize or haven't personally added. 🛡️

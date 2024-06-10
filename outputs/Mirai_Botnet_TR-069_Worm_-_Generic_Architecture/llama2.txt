@@ -1,0 +1,20 @@
+Hello Pablo! I'm writing to inform you about something important regarding your home network security. Our system has detected a potential threat and sent out an alert. We recommend you take this seriously because it could cause problems for you and your family if not addressed promptly. Here is what happened: 
+
+Our system detected an unauthorized attempt to gain access to your Philips Hue Bridge, which is a part of your home network. This could be a sign that someone is trying to hack into your system and gain control over your smart devices, including lights, thermostats, security cameras, and other connected devices. If the intruder gains access, they could potentially use your devices against you, like turning on lights in a dark room or altering your thermostat settings when you're not around. 
+
+If this happens, it could lead to several problems for you and your family, such as: 
+
+* Privacy concerns - Someone could be watching you through your security cameras or accessing your personal information without authorization. 
+* Financial loss - The hacker could potentially use your devices to gain access to your financial accounts or steal sensitive information like passwords or credit card numbers. 
+* Technical issues - Your smart devices may not work properly if they are compromised by a malicious actor, causing inconvenience and wasting resources. 
+* Legal consequences - Depending on the severity of the intrusion, you could face legal consequences for failing to protect your network and data. 
+
+To prevent this from happening, please take the following steps: 
+
+1. Change all passwords immediately! Make sure they are strong and unique for each device. 
+2. Update all your devices with the latest security patches and firmware updates. This will help fix any known vulnerabilities that could be exploited by hackers. 
+3. Review your network security settings to ensure everything is configured correctly. Check that firewalls are enabled, and intrusion detection systems are activated on all devices connected to the network. Make sure they're set up correctly so they can detect any suspicious activity.  
+4. Install antivirus software on every device connected to your home network, including smartphones, tablets, laptops, desktops, and smart TVs. This will help protect against malware that could be used by hackers to gain access to your devices. 
+5. Consider investing in a security service that can monitor your network for suspicious activity and alert you if anything unusual is detected. These services can provide an additional layer of protection against cyber threats. 
+
+Please follow these steps immediately to protect your home network and devices from potential threats. Don't ignore this warning, as it could lead to serious consequences if left unaddressed!

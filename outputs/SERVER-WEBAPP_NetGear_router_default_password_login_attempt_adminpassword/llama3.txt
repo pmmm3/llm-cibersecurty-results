@@ -1,0 +1,21 @@
+**Warning Message**
+
+Hi Pablo,
+
+We've detected an unusual attempt to access your Smart Home network using the default password "admin" and "password". This is a serious issue that requires immediate attention.
+
+If you don't take action, this unauthorized access could lead to:
+
+* Unwanted changes to your Smart Home devices
+* Exposure of personal data stored on these devices
+* Potential damage to your devices or even your entire network
+
+To stop this intrusion, please follow these simple steps:
+
+1. **Change the default password**: Go to your router's settings (usually by typing its IP address in a web browser) and update the administrator password to something strong and unique.
+2. **Secure your Philips Hue Bridge**: Open the Philips Hue app, go to Settings > Account, and change the bridge's username and password to something new.
+3. **Restart your router**: This will ensure that any unauthorized connections are terminated.
+
+By following these steps, you'll significantly reduce the risk of further intrusions and protect your Smart Home devices from potential harm.
+
+Please take immediate action to address this warning. If you have any questions or concerns, don't hesitate to reach out.

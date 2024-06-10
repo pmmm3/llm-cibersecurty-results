@@ -1,0 +1,24 @@
+**Warning Message**
+
+Hi Pablo,
+
+I'm sending you a critical alert from your home network. Our monitoring system has detected that someone or something is trying to access and control some of your Smart Home Devices without your permission.
+
+This could be very serious because if we don't take action, it might lead to:
+
+* Someone seeing what's happening in your home through cameras
+* Your lights and other devices being controlled by an unauthorized person
+* Your personal data and security compromised
+
+To stop this from happening, please follow these steps:
+
+1. Go to the Philips Hue app on your phone or tablet.
+2. Open the "Settings" section and look for the "Bridge" option.
+3. Make sure that the "Network" settings are set to "Secure" mode. This will help prevent unauthorized access to your devices.
+
+By taking these simple steps, you'll be able to protect your Smart Home Devices and keep your home safe from unwanted intrusions.
+
+Please take immediate action to resolve this issue. If you're unsure or need assistance, don't hesitate to reach out to me for support.
+
+Best regards,
+[Your Name]

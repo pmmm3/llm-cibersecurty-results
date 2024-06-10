@@ -1,0 +1,19 @@
+**Warning Message:**
+
+Hey Pablo! 🚨
+
+There's been a security breach in your home network! Someone just tried to access your router using the default username and password. 😱
+
+This could mean someone is trying to control your smart home devices and could lead to:
+
+* Someone changing your network settings and cutting you off from the internet
+* Sensitive information like your passwords being stolen
+* Your smart home devices being controlled without your permission
+
+**Here's what you need to do to keep your home safe:**
+
+1. Change the router's default username and password immediately. Use a strong password that's at least 12 characters long and includes a mix of upper and lowercase letters, numbers, and symbols.
+2. Check your router's settings to see if there's an option to enable two-factor authentication. This adds an extra layer of security by requiring a code from your phone in addition to your password.
+3. Update your Philips Hue Bridge to the latest version. This will fix any security vulnerabilities that could be exploited by attackers.
+4. Make sure all your smart home devices are up-to-date with the latest firmware.
+5. Keep your router's firewall enabled. This will help block unauthorized access to your network.

@@ -1,0 +1,22 @@
+**Warning Message**
+
+Hi Pablo,
+
+I've got some important news to share with you about your home network. Our system has detected a sneaky botnet trying to get into your Philips Hue Bridge, which is part of your Smart Home.
+
+This botnet, called Mirai Botnet TR-069 Worm, is like a digital thief trying to break into your home's security. If we don't stop it now, it could potentially:
+
+* Steal sensitive information from your devices
+* Control some of your smart gadgets without your permission
+* Slow down your internet connection and cause trouble with online activities
+
+To keep your home safe and secure, please follow these steps to kick the botnet out:
+
+1. **Restart your router**: Unplug the power cord from your Philips Hue Bridge for 30 seconds, then plug it back in. This will reboot your device and help clear out any malware.
+2. **Update your devices**: Make sure all your Smart Home Devices have the latest software updates installed. You can usually find these settings under each device's "Settings" or "Help" menu.
+3. **Change your passwords**: Update the login credentials for all your Smart Home accounts to strong, unique passwords. This will make it harder for any future attackers to get in.
+4. **Keep your devices up-to-date**: Regularly check for software updates and install them as soon as they're available. This will help prevent similar attacks from happening again.
+
+By following these steps, you'll be able to stop the Mirai Botnet TR-069 Worm and keep your home network safe and secure. If you have any questions or concerns, feel free to reach out to me anytime for assistance.
+
+Stay safe online!

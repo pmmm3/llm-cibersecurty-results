@@ -1,0 +1,17 @@
+Dear Pablo,
+
+I'm writing to inform you that our home network has detected something suspicious going on. An unknown person is trying to get into our home system through Philips Hue Bridge! This could be very dangerous for us if we don't act fast. Here are some things you should know:
+
+* Someone is trying to break into our home network without our permission. 
+* If this intruder gets in, they could steal sensitive information or damage important files on our devices.
+* We need to stop them from getting deeper into the system before it's too late!
+
+To protect ourselves and our home network, we must take immediate action:
+
+1. Change all of your passwords for any account that connects to the internet. Make sure they are strong and unique.
+2. Check each device connected to the internet for any unusual activity or suspicious connections.
+3. Disable any unused apps or services on each device that accesses the internet. 
+4. Set up two-factor authentication for all accounts that offer it. This adds an extra layer of security so only authorized people can log in.
+5. Update your antivirus software and run a scan on every device connected to the internet.
+
+Please take these steps as soon as possible, Pablo! If we don't act fast, the intruder could cause serious damage or steal sensitive information from our home network. Remember, staying safe online means being proactive about security measures!

@@ -1,0 +1,23 @@
+Here's a warning message that I came up with:
+
+**Warning Message**
+
+Hi Pablo,
+
+We've detected a possible threat to your home network. Someone is trying to access your Philips Hue Bridge remotely, which could allow them to control your smart lights and other devices.
+
+If we don't take action, this could lead to your whole Smart Home system being compromised. Imagine someone turning off the lights or even worse, controlling your cameras and microphones!
+
+To keep your home safe, please follow these steps:
+
+1. **Log in to your Philips Hue account**: Go to your phone or computer and log in to your Philips Hue account.
+2. **Change your password immediately**: Make a new, strong password for your Philips Hue account.
+3. **Reset the bridge**: Restart your Philips Hue Bridge by unplugging it from power, waiting 30 seconds, then plugging it back in.
+4. **Run a security scan**: Use a reliable antivirus software to scan your devices and network for any malware or viruses.
+
+By taking these steps, you'll help prevent any further unauthorized access to your Smart Home system. Remember, cybersecurity is everyone's responsibility!
+
+Stay safe,
+[Your Name]
+
+Please let me know if this meets the requirements!

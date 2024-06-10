@@ -1,0 +1,13 @@
+Hello Pablo,
+I've got some bad news. Our Smart Home security system has detected an unauthorized person trying to access your home network through your Philips Hue Bridge. This means they could be trying to spy on you, steal your personal information or even take control of your devices. 
+If this intruder gains access to your network, they could potentially:
+* View and change your personal data like passwords and credit card numbers
+* Spy on you through your security cameras
+* Turn on your lights, thermostat and other devices remotely without your permission
+* Cause damage to your devices or network
+To stop this intruder from causing any harm, please follow these steps: 
+1. Change your passwords immediately. Make sure they are strong and unique for each device.
+2. Update all of your devices with the latest security patches and software updates.
+3. Disable remote access to your Smart Home Devices until you can figure out what's going on.
+4. Contact us for further assistance and guidance. 
+Don't ignore this alert, as it could lead to serious consequences. Please take action right away to protect your privacy and security. 

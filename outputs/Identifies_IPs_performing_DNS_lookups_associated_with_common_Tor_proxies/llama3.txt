@@ -1,0 +1,25 @@
+Here is a warning message that I've crafted to inform Pablo about the alert:
+
+**Alert: Possible Cyber Threat Detected**
+
+Hi Pablo,
+
+I wanted to reach out to you because our home network has detected something suspicious. It looks like someone or something is trying to access your Smart Home devices, including your Philips Hue Bridge.
+
+This could be a big problem if we don't take action quickly. If this intrusion isn't stopped, it could mean that:
+
+* Your smart devices might start acting weirdly
+* You might lose control over some of them
+* Your personal data (like login credentials or device settings) might be stolen
+
+Here's what you can do to stop this from happening:
+
+1. **Check your Philips Hue Bridge**: Make sure it's turned off and then turn it back on.
+2. **Update your device passwords**: Go to the settings of each smart device and change the password to something new and strong (at least 12 characters long).
+3. **Check for any unfamiliar devices**: Look through your device list and remove any devices that you don't recognize or haven't authorized.
+4. **Run a network scan**: Use our home network's built-in scanner to look for any suspicious activity or unknown devices.
+5. **Change your WiFi password**: If you haven't already, change the WiFi password on your router (ask me if you need help with this!).
+
+By following these steps, we can ensure that your Smart Home is safe and secure.
+
+Please let me know if you have any questions or concerns!

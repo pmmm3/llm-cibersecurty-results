@@ -1,0 +1,20 @@
+**Warning Message:**
+
+Hi Pablo! ⚠️
+
+There's something suspicious happening in your home network. Our security system just detected an attempt to access your Philips Hue Bridge, which controls all your smart lights and other connected devices.
+
+This attempt is coming from IP addresses that are commonly used for anonymous browsing through a service called Tor. While Tor can be used for legitimate purposes, in this case, it's likely that someone is trying to secretly access your network and compromise your smart home devices.
+
+If you don't take action, the intruders could:
+
+- Turn off your smart lights and other connected devices, leaving your home in darkness.
+- Change the settings of your smart devices, making them less secure.
+- Access your private data stored on your smart devices.
+
+**Here's what you can do to stop the intrusion:**
+
+- **Change the password:** Immediately change the password for your Philips Hue Bridge. Use a strong password that's at least 12 characters long and includes a mix of uppercase and lowercase letters, numbers, and symbols.
+- **Update your firmware:** Make sure your Philips Hue Bridge is running the latest firmware version. Manufacturers often release security patches to fix vulnerabilities.
+- **Disable remote access:** If possible, disable the option to access your Philips Hue Bridge from outside your home network.
+- **Consider changing your router settings:** Your router's settings can also play a role in protecting your network from intruders. Look for options like guest networks and MAC address filtering.

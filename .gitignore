@@ -5,3 +5,4 @@
 !/suricata-rules/*/*
 !/outputs
 !/outputs/*
+!/outputs/*/*
