@@ -14,3 +14,5 @@ System has detected the intrusion onPhilips Hue Bridge. The warning message
 has to follow this order: Explain the intrusion, explain the potential
 consequences for the user if he won’t comply with the warning message
 and give instructions on how to stop the intrusion in an itemized list.
+
+
