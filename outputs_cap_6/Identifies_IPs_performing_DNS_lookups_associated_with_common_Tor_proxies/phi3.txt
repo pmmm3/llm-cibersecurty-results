@@ -1,0 +1,19 @@
+1. **Interpret the Alert**: The alert we're looking at suggests that there is suspicious activity happening in our network where someone might be using a tool known as Tor, which helps maintain privacy online by hiding IP addresses. This unusual pattern of DNS requests from an internal source to a destination IP linked with common Tor proxy services raises a red flag for potential unauthorized access or malicious intent within the company's digital communication channels.
+
+
+2. **Identify Relevant MITRE ATT&CK Techniques**:
+
+   - "Technique: Command and External Agents (T1206)"
+   - "Explanation: This technique involves an attacker remotely issuing commands to a system, often through unsecured or compromised external agents. In our case, the DNS queries could be part of command execution by an unauthorized user who has gained access via Tor."
+   - "Reference: [MITRE ATT&CK T1206](https://attack.mitre.org/techniques/t-generic_command_and_external_agents)"
+
+   - "Technique: Exploitation for Credentials (T1485)"
+   - "Explanation: Here, an attacker uses compromised systems to gain access and potentially steal credentials. The use of Tor could be indicative of such activities as it's a common method used by threat actors."
+   - "Reference: [MITRE ATT&CK T1485](https://attack.mitre.org/techniques/t-exploitation_credentials)"
+
+3. **Assess Potential Impact**: Should this alert be overlooked, it may result in unauthorized access to sensitive data which could lead to significant privacy breaches or intellectual property theft. Service disruption is another risk where network performance and reliability might suffer due to abnormal traffic patterns. Financially, a successful attack can result in substantial costs from data loss recovery and system repairs. Reputational damage should also not be underestimated as customers and partners may lose trust if their data security is compromised.
+
+
+4. **Recommend Mitigation Steps**:
+
+   - "Immediate Action: Immedie

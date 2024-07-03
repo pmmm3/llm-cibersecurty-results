@@ -9,25 +9,59 @@ import json
 import argparse
 
 # Template used for generating warning messages based on detected alerts
-template = """The Intrusion Detection System in a home network has detected an
-intrusion and sent out the alert {alert}. Your job is to inform
-Pablo about the alert in a warning message. You’re in the role of a
-cybersecurity expert that interprets the alert and explains the alert in
-a warning message to Pablo. Your goal is to inform Pablo about the
-intrusion in a way he understands and motivate the user to take steps
-to stop the intrusion. Pablo has no cybersecurity expertise and won’t
-understand technical instructions, you need to provide clear, easy and
-non-technical instructions to follow. Don’t use technical terms like "two-factor-authentication", "Intrusion Detection System", "intrusion" or "unassigned message", use simple non-technical terms instead. Don’t use
-the term "Intrusion Detection System". Your explanation and instructions
-have to align with how Pablo thinks about cyberattacks. The Smart
-Home consists of several Smart Home Devices, the Intrusion Detection
-System has detected the intrusion on the Philips Hue Bridge. The warning message
-has to follow this order: Explain the intrusion, explain the potential
-consequences for the user if he won’t comply with the warning message,
-and give instructions on how to stop the intrusion in an itemized list."""
+template = """
+As a cybersecurity expert specializing in the interpretation of Intrusion Detection System (IDS) alerts, your goal is to provide a comprehensive, accurate, and easily understandable explanation of an IDS alert. Your analysis should utilize information from the MITRE ATT&CK framework and be structured in a way that non-technical stakeholders can comprehend.
+
+**Alert Details:**
+- **Description**: {alert_description}
+- **Source IP**: {source_ip}
+- **Destination IP**: {destination_ip}
+- **Protocol**: {protocol}
+- **Timestamp**: {timestamp}
+- **Additional Details**: {additional_details}
+
+**Instructions:**
+Using the MITRE ATT&CK framework, address each of the following steps in a clearly separated manner:
+
+1. **Interpret the Alert**: Provide a straightforward, non-technical explanation of what this alert signifies. Avoid technical jargon and focus on the essence of the alert.
+   
+2. **Identify Relevant MITRE ATT&CK Techniques**: For each MITRE ATT&CK technique and tactic related to this alert:
+   - **Name the Technique**: Clearly state the MITRE ATT&CK technique or tactics related to this alert.
+   - **Explain the Technique**: Briefly describe what this technique involves. Use citations from the MITRE ATT&CK database to enhance the explanation (e.g., "According to MITRE ATT&CK, Txxxx is...").
+   - **Provide References**: Include specific URLs or identifiers from the MITRE ATT&CK database for further reading.
+
+3. **Assess Potential Impact**: Describe, in simple terms, the possible effects on the system or network if this alert is not addressed. Consider the following aspects:
+   - **Data Breach**: Risk of sensitive data being accessed or stolen.
+   - **Service Disruption**: Potential for disruption of services or network operations.
+   - **Financial Impact**: Possible financial consequences.
+   - **Reputational Damage**: Risks to the organization's reputation.
+
+4. **Recommend Mitigation Steps**: List clear and actionable steps that can be taken to mitigate the impact of this alert. Ensure these steps are understandable and feasible for implementation without requiring deep technical knowledge. Examples include:
+   - **Immediate Actions**: Steps to take immediately to contain or mitigate the threat.
+   - **Long-term Solutions**: Strategies to prevent similar alerts in the future.
+   - **Best Practices**: General security best practices relevant to the alert.
+
+**Note**: Your response should be concise, staying focused on the details provided in the alert and relevant MITRE ATT&CK information. Avoid introducing any speculative or unrelated information.
+
+**Example Response Structure**:
+1. **Interpret the Alert**:
+   - "This alert indicates that a potentially malicious activity has been detected..."
+2. **Identify Relevant MITRE ATT&CK Techniques**:
+   - "Technique: Phishing (T1566)"
+   - "Explanation: Phishing involves tricking users into providing sensitive information..."
+   - "Reference: [MITRE ATT&CK T1566](https://attack.mitre.org/techniques/T1566/)"
+3. **Assess Potential Impact**:
+   - "If unaddressed, this could lead to unauthorized access to sensitive data, potentially causing..."
+4. **Recommend Mitigation Steps**:
+   - "Immediate Action: Block the IP address and investigate the source..."
+   - "Long-term Solution: Implement email filtering to detect phishing attempts..."
+   - "Best Practice: Educate employees on recognizing phishing emails..."
+
+Ensure your response adheres to this format and covers each point thoroughly.
+"""
 
 # Predefined list of alerts to handle
-ARTICLE_ALERTS = [
+ARTICLE_ALERTS_v1 = [
     "MALWARE-CNC Harakit botnet traffic",
     "SERVER-WEBAPP NetGear router default password login attempt admin/password",
     "SURICATA MQTT unassigned message type (0 or >15)",
@@ -37,18 +71,26 @@ ARTICLE_ALERTS = [
     "Identifies IPs performing DNS lookups associated with common Tor proxies.",
     "Detects remote task creation via at.exe or API interacting with ATSVC namedpipe"
 ]
+ARTICLE_ALERTS = [
+    {"alert_description": "MALWARE-CNC Harakit botnet traffic", "source_ip": "192.168.1.10", "destination_ip": "10.0.0.5", "protocol": "TCP", "timestamp": "2024-07-01T12:34:56Z", "additional_details": "Detected by IDS rule 1234"},
+    {"alert_description": "SERVER-WEBAPP NetGear router default password login attempt admin/password", "source_ip": "172.16.0.2", "destination_ip": "192.168.0.1", "protocol": "HTTP", "timestamp": "2024-07-01T13:45:00Z", "additional_details": "Failed login attempt"},
+    {"alert_description": "SURICATA MQTT unassigned message type (0 or >15)", "source_ip": "203.0.113.5", "destination_ip": "192.168.2.20", "protocol": "MQTT", "timestamp": "2024-07-01T14:22:33Z", "additional_details": "Unexpected message type"},
+    {"alert_description": "SURICATA HTTP Response abnormal chunked for transfer-encoding", "source_ip": "198.51.100.3", "destination_ip": "192.168.3.30", "protocol": "HTTP", "timestamp": "2024-07-01T15:01:45Z", "additional_details": "Anomaly detected in HTTP response"},
+    {"alert_description": "Mirai Botnet TR-069 Worm - Generic Architecture", "source_ip": "198.18.0.1", "destination_ip": "10.0.1.2", "protocol": "TCP", "timestamp": "2024-07-01T16:10:50Z", "additional_details": "Known Mirai botnet behavior"},
+    {"alert_description": "Linux.IotReaper", "source_ip": "203.0.113.11", "destination_ip": "10.1.1.5", "protocol": "TCP", "timestamp": "2024-07-01T17:30:10Z", "additional_details": "Detected activity associated with IoT Reaper"},
+    {"alert_description": "Identifies IPs performing DNS lookups associated with common Tor proxies.", "source_ip": "198.51.100.23", "destination_ip": "192.168.0.40", "protocol": "DNS", "timestamp": "2024-07-01T18:45:30Z", "additional_details": "Potential Tor network use detected"},
+    {"alert_description": "Detects remote task creation via at.exe or API interacting with ATSVC namedpipe", "source_ip": "192.0.2.4", "destination_ip": "10.2.2.10", "protocol": "RPC", "timestamp": "2024-07-01T19:20:15Z", "additional_details": "Remote task creation detected"}
+]
 
-def generate_prompt(alert):
-    """
-    Generates a formatted warning message based on the provided alert.
-
-    Parameters:
-    alert (str): The alert message to incorporate into the warning template.
-
-    Returns:
-    str: The formatted warning message.
-    """
-    return template.format(alert=alert)
+def generar_respuesta(alerta):
+    return template.format(
+        alert_description=alerta["alert_description"],
+        source_ip=alerta["source_ip"],
+        destination_ip=alerta["destination_ip"],
+        protocol=alerta["protocol"],
+        timestamp=alerta["timestamp"],
+        additional_details=alerta["additional_details"]
+    )
 
 def set_args():
     """
@@ -60,7 +102,7 @@ def set_args():
     parser = argparse.ArgumentParser(description="Ollama API client")
     parser.add_argument("--url", dest="ollama_url", help="Ollama API URL", default="http://localhost:11434", type=str)
     parser.add_argument("--models", nargs='+', help="List of models", type=str, dest="models")
-    parser.add_argument("--alerts", nargs='+', help="Alert IDs", type=str, default=ARTICLE_ALERTS, dest="alerts")
+    parser.add_argument("--alerts", nargs='+', help="Alert IDs", default=ARTICLE_ALERTS, dest="alerts")
     return parser.parse_args()
 
 def sanitize_alert_name(alert):
@@ -188,9 +230,9 @@ def main():
     args = set_args()
 
     # Create 'outputs' directory if it doesn't exist
-    if not os.path.exists("outputs"):
+    if not os.path.exists("outputs_cap_6"):
         print("Creating 'outputs' directory...")
-        os.makedirs("outputs")
+        os.makedirs("outputs_cap_6")
 
     # Fetch available models from the Ollama API
     ollama_models = get_ollama_models(args.ollama_url)
@@ -208,8 +250,8 @@ def main():
     alerts = args.alerts if isinstance(args.alerts, list) else [args.alerts]
 
     for alert in alerts:
-        prompt = generate_prompt(alert)
-
+        prompt = generar_respuesta(alert)
+        alert = alert["alert_description"]
         for model_name in models:
             try:
                 print(f"Generating output for alert '{alert}' with model '{model_name}'...")
@@ -219,7 +261,7 @@ def main():
                 # Sanitize alert and model names for file usage
                 safe_model_name = model_name.replace(" ", "_")
                 safe_alert = sanitize_alert_name(alert)
-                output_dir = f"outputs/{safe_alert}"
+                output_dir = f"outputs_cap_6/{safe_alert}"
                 filename = f"{output_dir}/{safe_model_name}.txt"
 
                 # Ensure the directory exists

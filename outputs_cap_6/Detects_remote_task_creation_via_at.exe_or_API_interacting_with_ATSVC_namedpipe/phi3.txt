@@ -1,0 +1,20 @@
+1. **Interpret the Alert**: This alert suggests that an unauthorized task has been created, which may be a sign of someone trying to execute malicious commands or gain control over our systems. It's like finding out that someone is attempting to send secret messages through specific channels without permission.
+
+
+2. **Identify Relevant MITRE ATT&CK Techniques**:
+   - **Tactic Name**: Execution (T1079)
+   - **Explanation**: The alert implies an attacker is trying to run unauthorized commands on a system, typically by creating tasks or processes that could lead to compromised operations. According to MITRE ATT&CK, this can happen through various means such as shellcode execution or remote task creation (https://attack.mitre.org/techniques/t1079/).
+   - **Reference**: [MITRE ATT&CK T1079](https://attack.mitre.org/technique/t1079)
+
+
+3. **Assess Potential Impact**:
+   - Data Breach: If left unchecked, this could potentially allow attackers to access confidential information or systems.
+   - Service Disruption: Malicious tasks may interfere with normal operations, causing downtime for critical services.
+   - Financial Impact: Depending on the extent of a breach, costs associated with damage control and loss of business could be significant.
+   - Reputational Damage: The organization's image might suffer if stakeholders lose trust due to security incidents.
+
+
+4. **Recommend Mitigation Steps**:
+   - Immediate Action: Disconnect the source IP address and conduct a thorough investigation into the unauthorized task creation, analyzing any potential data access or service disruption that occurred.
+   - Long-term Solution: Enhance monitoring capabilities to detect unusual activities quickly, update security protocols to prevent remote command execution, and regularly review system permissions.
+   - Best Practice: Conduct regular training for staff on security best practices and how to recognize signs of unauthorized access attempts.

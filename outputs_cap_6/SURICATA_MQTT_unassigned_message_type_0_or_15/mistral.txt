@@ -1,0 +1,18 @@
+ 1. **Interpret the Alert**:
+   - This alert signifies that an unassigned message type was detected during MQTT (Message Queuing Telemetry Transport) protocol communication between two devices. The unexpected message type may indicate a potential security issue as communications using this protocol typically follow specific message formats and types.
+
+2. **Identify Relevant MITRE ATT&CK Techniques**:
+   - Technique: Protocol Hijacking (T1102)
+     - Explanation: An attacker uses Protocol Hijacking to intercept communication channels and modify or eavesdrop on the data being transmitted, including manipulating message types.
+     - Reference: [MITRE ATT&CK T1102](https://attack.mitre.org/techniques/T1102/)
+
+3. **Assess Potential Impact**:
+   - Data Breach: Unauthorized access to data could be a risk if the unexpected message type contains malicious content or allows an attacker to gain further access to sensitive information.
+   - Service Disruption: This alert may result in MQTT service disruptions if the incorrect message types cause communication issues between devices, leading to potential network downtime.
+   - Financial Impact: Financial consequences could arise from unauthorized data access or services disruptions, depending on the specific system and the nature of the data involved.
+   - Reputational Damage: Organizational reputation may be negatively affected if a data breach occurs due to this issue, leading to loss of customer trust.
+
+4. **Recommend Mitigation Steps**:
+   - Immediate Action: Block or restrict traffic between the two IP addresses involved in the communication while investigating the potential security threat. Review any relevant MQTT logs for additional context and analyze the message content.
+   - Long-term Solution: Regularly update MQTT brokers, clients, and associated software to ensure they are protected against known vulnerabilities and have proper access control mechanisms in place. Implement network segmentation to limit potential damage from unauthorized access or data breaches.
+   - Best Practice: Monitor for unusual MQTT traffic patterns and unexpected message types regularly, ensuring that all devices within the system follow expected communication protocols.

@@ -1,0 +1,23 @@
+**Interpret the Alert**: This alert indicates that a potentially malicious MQTT activity has been detected, involving an unexpected message type (0 or >15). This suggests that an unusual or unauthorized message may have been sent or received on the MQTT protocol.
+
+**Identify Relevant MITRE ATT&CK Techniques**:
+
+* **Technique: Unapproved Use of Functionality  (T1204.002)**
+	+ Explanation: This technique involves exploiting or misusing functionality in a system, network, or application to achieve malicious goals.
+	+ Reference: [MITRE ATT&CK T1204.002](https://attack.mitre.org/techniques/T1204.002/)
+* **Technique: MQTT Protocol Unusual Behavior  (T1191)**
+	+ Explanation: This technique involves exploiting unusual behavior in the MQTT protocol to exfiltrate data, send malicious commands, or achieve other malicious goals.
+	+ Reference: [MITRE ATT&CK T1191](https://attack.mitre.org/techniques/T1191)
+
+**Assess Potential Impact**: If unaddressed, this alert could lead to unauthorized access to sensitive data or system compromise. This may result in:
+
+* Data Breach: Risk of sensitive information being accessed or stolen.
+* Service Disruption: Potential disruption of services or network operations.
+* Financial Impact: Possible financial consequences from unauthorized transactions or data theft.
+* Reputational Damage: Risks to the organization's reputation due to compromised security and trust.
+
+**Recommend Mitigation Steps**:
+
+* **Immediate Action**: Block the MQTT connection and investigate the source of the unusual message type. Review logs for any further suspicious activity.
+* **Long-term Solution**: Implement additional monitoring and analysis of MQTT traffic to detect and prevent similar unusual behavior. Consider implementing rate limiting or authentication mechanisms for MQTT connections.
+* **Best Practice**: Regularly review and update your organization's security policies and procedures to ensure they address MQTT protocol usage and potential vulnerabilities.

@@ -1,0 +1,21 @@
+1. **Interpret the Alert**:
+   This alert suggests that there has been unusual activity in our network where messages are being sent between two IP addresses using a protocol called MQTT, which isn't typically used for such communication by authorized users or processes. It might be an unautagonized attempt to exploit a system vulnerability.
+
+2. **Identify Relevant MITRE ATT&CK Techniques**:
+   - "Technique: Infiltration (T1043)"
+     - Explanation: This technique involves gaining initial access by exploiting network vulnerabilities or using unauthorized protocols.
+     - Reference: [MITRE ATT&CK T1043](https://attack.mitre.org/techniques/t-0257)
+   - "Technique: Command and Control (C2)"
+     - Explanation: Once access is gained, attackers establish a command and control channel to manipulate the victim's system remotely.
+     - Reference: [MITRE ATT&CK T1045](https://attack.mitre.org/techniques/t-0263)
+   - "Technique: Exploit (E)"
+     - Explanation: The use of MQTT may indicate that the attacker is leveraging a vulnerability associated with this protocol to gain access or exert control.
+     - Reference: [MITRE ATT&CK E](https://attack.mitre.org/techniques/e-0156)
+
+3. **Assess Potential Impact**:
+   If the alert is ignored, unauthorized access could potentially lead to data breaches, causing financial losses and reputational harm for our organization due to stolen or compromised information. Services might be disrupted if malicious commands are executed on critical systems.
+
+4. **Recommend Mitigation Steps**:
+   - Immediate Action: Disable the MQTT service, block the offending IP address from further communication, and conduct a thorough investigation to determine whether it's an attack in progress or aftermath.
+   - Long-term Solution: Enhance network segmentation to restrict unused protocols like MQTT to non-critical systems, regularly update security patches for all software components, and monitor unusual communication patterns across the network.
+   - Best Practice: Educate staff about not using unauthorized communication channels on corporate devices and institute strict access controls for different network protocols.

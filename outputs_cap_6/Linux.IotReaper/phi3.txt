@@ -1,0 +1,18 @@
+1. **Interpret the Alert**:
+   - This alert warns us that there's been suspicious activity detected, similar to a known hacking pattern aimed at compromising IoT devices in our network. Think of it like finding an unwanted visitor trying to sneak into your home who could potentially cause trouble.
+
+2. **Identify Relevant MITRE ATT&CK Techniques**:
+   - "Technique: Phishing (T1566)"
+     - Explanation: This method involves deceiving individuals to gain unauthorized access, like sending fake emails that trick users into revealing passwords.
+     - Reference: [MITRE ATT&CK T1566](https://attack.mitre.org/techniques/t-phishing)
+   - "Technique: Resource Competition (T0297)"
+     - Explanation: Attackers try to disrupt services or steal resources, similar to someone trying to cut off the power supply when they're not welcome.
+     - Reference: [MITRE ATT&CK T0297](https://attack.mitre.org/techniques/t-resource_competition)
+
+3. **Assess Potential Impact**:
+   - If this alert is ignored, we could face unauthorized access to our network and IoT devices, leading to potential data breaches. Disruptions in services may occur, affecting daily operations. Financially, it can result in loss due to theft or downtime costs. The organization's reputation might also suffer if sensitive information is leaked.
+
+4. **Recommend Mitigation Steps**:
+   - Immediate Action: Isolate affected devices and systems from the network and analyze logs for any further suspicious activity.
+   - Long-term Solution: Regularly update device firmware, monitor unusual access patterns, and conduct security audits to strengthen defenses against such threats.
+   - Best Practice: Implement strict password policies, educate employees about phishing attempts, and routinely back up critical data for quick recovery in case of an incident.

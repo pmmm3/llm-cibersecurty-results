@@ -1,0 +1,33 @@
+## Alert Interpretation: SURICATA MQTT Unassigned Message Type
+
+**1. Interpret the Alert:**
+
+This alert highlights unusual activity involving the MQTT protocol. Specifically, it detects an unassigned message type (0 or >15), which suggests an attempt to bypass authentication or send unauthorized data.
+
+**2. Identify Relevant MITRE ATT&CK Techniques:**
+
+- **T1566: Phishing:** Attackers trick users into revealing sensitive information through malicious emails or messages. This aligns with the unexpected message type, potentially luring users into malicious actions.
+- **T1055: Command and Scripting Injection:** The exploit could involve injecting malicious code into the MQTT protocol, allowing attackers to execute unauthorized commands or scripts on the targeted system.
+
+**3. Assess Potential Impact:**
+
+- Data Breach: Unsecured data transmitted through MQTT could be accessed or stolen.
+- Service Disruption: Attackers could disrupt MQTT-dependent services or operations.
+- Financial Impact: Financial losses could result from compromised financial data or system downtime.
+- Reputational Damage: Organizations might suffer reputational damage due to compromised data or security vulnerabilities.
+
+**4. Recommend Mitigation Steps:**
+
+**Immediate Actions:**
+- Block the source IP address associated with the alert.
+- Disable or restrict access to vulnerable MQTT services.
+
+**Long-term Solutions:**
+- Implement robust authentication and authorization mechanisms for MQTT.
+- Use TLS encryption to secure data in transit.
+- Update MQTT software and libraries to address known vulnerabilities.
+
+**Best Practices:**
+- Implement email or message filtering to detect and block phishing attempts.
+- Train employees to recognize and avoid phishing emails.
+- Maintain secure network infrastructure and access controls.

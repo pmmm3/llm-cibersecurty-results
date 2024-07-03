@@ -1,0 +1,19 @@
+1. **Interpret the Alert**: The alert indicates that an unauthorized attempt has been made using a known malware, specifically Mirai, which is attempting to propagate from one machine in our network (source IP) to another (destination IP). This suggests a potential security breach where an attacker may be trying to take control of additional systems.
+
+2. **Identify Relevant MITRE ATT&CK Techniques**:
+   - **Technique: Command and Control (C2)**
+     - "MITRE ATT&CK defines C2 as the process by which an attacker remotely controls a compromised system to perform malicious activities."
+     - Reference: [MITRE ATT&CK Technique T1039](https://attack.mitre.org/techniques/t1039)
+   - **Technique: Propagation**
+     - "Propagation involves techniques that enable the spreading of malware from one victim to another."
+     - Reference: [MITRE ATT&CK Technique T1208](https://attack.mitre.org/techniques/t1208)
+   - **Technique: Exploit**
+     - "This technique involves the use of a known vulnerability to gain unautinased access or escalate privileges."
+     - Reference: [MITRE ATT&CK Technique T1194](https://attack.mitre.org/techniques/t1194)
+
+3. **Assess Potential Impact**: If this intrusion attempt goes unchecked, it could lead to unauthorized access or control over additional devices within the network. This may result in data breaches where sensitive information is at risk of being accessed and stolen. There could also be service disruptions as compromised systems might become part of a botnet affecting overall network operations. Financially, this incident can lead to costs associated with remediation efforts and potential loss of business due to downtime or data breaches. Reputational damage may occur if customer trust is eroded by the perception that their data isn't securely protected.
+
+4. **Recommend Mitigation Steps**:
+   - Immediate Action: Temporarily block traffic from both IP addresses involved in this alert and conduct a thorough investigation to identify compromised systems or services.
+   - Long-term Solution: Regularly update all devices with the latest security patches, implement network segmentation to limit lateral movement of threats, and ensure proper monitoring for suspicious activities across the entire infrastructure.
+   - Best Practice: Conduct regular cybersecurity awareness training for employees and establish a proactive incident response plan that includes protocols for responding to similar alerts.
